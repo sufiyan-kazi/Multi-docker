@@ -15,7 +15,7 @@ after_success:
   - docker build -t sufi/multi-server ./server
   - docker build -t sufi/multi-worker ./worker
 
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password--stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push sufi/multi-client
   - docker push sufi/multi-nginx
   - docker push sufi/multi-server
